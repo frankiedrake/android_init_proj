@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.app.ActionBarDrawerToggle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -13,8 +14,13 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import java.sql.SQLException;
+import java.util.Date;
+
 
 public class MainActivity extends ActionBarActivity {
+    DBHelper dbHelper;
+    dbRIMS rims;
 
     private ListView mDrawerList;
     private DrawerLayout mDrawerLayout;
@@ -24,6 +30,16 @@ public class MainActivity extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        dbHelper = new DBHelper(this);
+        rims = new dbRIMS();
+        Date currDate = null;
+        try {
+            currDate = rims.retrieveData();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        Log.d("sybase connect", currDate.toString());
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
@@ -38,13 +54,14 @@ public class MainActivity extends ActionBarActivity {
     }
 
     private void addDrawerItems() {
-        String[] osArray = { "Android", "iOS", "Windows", "OS X", "Linux" };
-        mAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, osArray);
+        String[] categoriesArr = { "Увеличение", "Снижение", "Блокировки" };
+        mAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, categoriesArr);
         mDrawerList.setAdapter(mAdapter);
 
         mDrawerList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Log.d("Clicked", "itemClick: position = " + position + ", id = " + id);
                 Toast.makeText(MainActivity.this, "Time for an upgrade!", Toast.LENGTH_SHORT).show();
             }
         });
@@ -56,7 +73,7 @@ public class MainActivity extends ActionBarActivity {
             /** Called when a drawer has settled in a completely open state. */
             public void onDrawerOpened(View drawerView) {
                 super.onDrawerOpened(drawerView);
-                getSupportActionBar().setTitle("Navigation!");
+                getSupportActionBar().setTitle("Меню");
                 invalidateOptionsMenu(); // creates call to onPrepareOptionsMenu()
             }
 

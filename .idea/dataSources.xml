@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" hash="2394493626">
+    <data-source source="LOCAL" name="rims@localhost" uuid="a775b077-11b8-4c37-b7bf-90781b2b348c">
+      <driver-ref>sybase.ase</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>com.sybase.jdbc4.jdbc.SybDriver</jdbc-driver>
+      <jdbc-url>jdbc:sybase:Tds:localhost:2638/rims</jdbc-url>
+    </data-source>
+  </component>
+</project>

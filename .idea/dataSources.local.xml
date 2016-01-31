@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="rims@localhost" uuid="a775b077-11b8-4c37-b7bf-90781b2b348c">
+      <secret-storage>master_key</secret-storage>
+      <user-name>dvlp</user-name>
+      <schema-pattern>rims.dba rims.dbo rims.diagnostics rims.dvlp</schema-pattern>
+      <default-schemas>rims.*</default-schemas>
+    </data-source>
+  </component>
+</project>
