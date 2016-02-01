@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <component name="dataSourceStorage">
   <data-source name="rims@localhost" uuid="a775b077-11b8-4c37-b7bf-90781b2b348c">
-    <database-info product="Sybase IQ" version="Sybase IQ/16.0.0.481/130503/P/sp01/Enterprise Linux64 - x86_64 - 2.6.18-194.el5/64bit/2013-05-03 16:14:49" jdbc-version="4.0" driver-name="jConnect (TM) for JDBC (TM)" driver-version="jConnect (TM) for JDBC(TM)/16.0 PL01 N-OFF (Build 27031)/P/EBF22531/JDK 1.6.0/jdbcmain/OPT/Thu Mar 20 11:14:13 PDT 2014">
+    <database-info product="Sybase IQ" version="Sybase IQ/16.0.0.481/130503/P/sp01/Enterprise Linux64 - x86_64 - 2.6.18-194.el5/64bit/2013-05-03 16:14:49" jdbc-version="4.0" driver-name="jConnect (TM) for JDBC (TM)" driver-version="jConnect (TM) for JDBC(TM)/7.07 ESD #5 (Build 26792)/P/EBF20686/JDK 1.6.0/jdbcmain/DEBUG/Mon Oct 15 11:33:24 PDT 2012">
       <extra-name-characters>@#$£¥</extra-name-characters>
       <identifier-quote-string>&quot;</identifier-quote-string>
     </database-info>
